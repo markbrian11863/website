@@ -1,0 +1,161 @@
+/* Enhanced Mobile Optimizations */
+
+/* Touch-friendly interactions */
+@media (max-width: 768px) {
+  /* Ensure all clickable elements are at least 44px for touch */
+  button, a, input[type="submit"], input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Improve text readability */
+  body {
+    line-height: 1.5;
+  }
+
+  /* Better spacing for mobile */
+  .section {
+    padding: 50px 0;
+  }
+
+  /* Optimize images for mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Mobile-friendly forms */
+  input, textarea, select {
+    font-size: 16px !important; /* Prevent zoom on iOS */
+    border-radius: 8px;
+    padding: 12px;
+    border: 2px solid #e2e8f0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Improve button accessibility */
+  .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 48px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  /* Better mobile navigation */
+  .mobile-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+    z-index: 999;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+  }
+
+  /* Mobile-specific animations */
+  .card:hover {
+    transform: none; /* Disable hover effects on touch devices */
+  }
+
+  /* Better mobile typography */
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  /* Mobile-friendly spacing */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Extra small devices (phones in portrait) */
+@media (max-width: 480px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Mobile-first grid layouts */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* Better mobile buttons */
+  .btn {
+    width: 100%;
+    max-width: none;
+    padding: 16px 20px;
+    font-size: 1.125rem;
+    min-height: 50px;
+  }
+
+  /* Mobile navigation improvements */
+  .mobile-menu {
+    top: 60px;
+  }
+
+  /* Better mobile cards */
+  .card {
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+/* Landscape orientation optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero {
+    min-height: 70vh;
+    padding-top: 60px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  /* Ensure images look crisp on high DPI screens */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
